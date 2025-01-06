@@ -1,21 +1,22 @@
+import { Feather } from "@expo/vector-icons";
 import { type ColorProps, useTheme } from "@shopify/restyle";
 import type { Theme } from "@theme";
-import { icons } from "lucide-react-native";
-import React, { memo } from "react";
+import type React from "react";
+import { memo } from "react";
 
-type Props = {
-  name: keyof typeof icons;
-  size?: keyof Theme["spacing"];
-} & ColorProps<Theme>;
+type IconProps = React.ComponentProps<typeof Feather>;
+
+type Props = Omit<Omit<IconProps, "color">, "size"> &
+  ColorProps<Theme> & {
+    size?: keyof Theme["spacing"];
+  };
 
 const Icon = memo(({ name, color, size }: Props) => {
   const theme = useTheme<Theme>();
   const vColor = theme.colors[color || "white"];
   const vSize = theme.spacing[size || 5];
 
-  const LucideIcon = icons[name];
-
-  return <LucideIcon color={vColor} size={vSize} />;
+  return <Feather name={name} color={vColor} size={vSize} />;
 });
 
 export default Icon;

@@ -60,7 +60,7 @@ export default function Page() {
           activeOpacity={0.7}
           onPress={() => refetch()}
         >
-          <Icon color="neutral300" name="RefreshCw" />
+          <Icon color="neutral300" name="refresh-cw" />
         </TouchableOpacity>
       </Box>
       <FlatList
