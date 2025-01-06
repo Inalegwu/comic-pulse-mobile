@@ -28,7 +28,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff",
     },
-    package: "com.comic-pulse.app",
+    package: "com.comicpulse.app",
   },
   extra: {
     ...ClientEnv,
