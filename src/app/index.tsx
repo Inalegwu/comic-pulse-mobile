@@ -52,7 +52,9 @@ export default function Page() {
         width="100%"
         paddingVertical={2}
       >
-        <Text fontSize={normalize(30)}>Comic Pulse</Text>
+        <Text fontWeight="bold" fontSize={normalize(30)}>
+          Comic Pulse
+        </Text>
         <TouchableOpacity
           padding={2}
           activeOpacity={0.7}

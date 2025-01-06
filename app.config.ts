@@ -30,6 +30,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     ...ClientEnv,
+    eas: {
+      projectId: "2edeb7cb-7c1f-4d74-b3ac-04a22c9a6c2f",
+    },
   },
   plugins: ["expo-font", "expo-router"],
 });
