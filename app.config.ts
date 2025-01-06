@@ -5,8 +5,9 @@ import pkg from "./package.json";
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: pkg.name,
-  slug: "pulse",
+  slug: "comic-pulse",
   version: pkg.version,
+  owner: "inalegwurealcode",
   scheme: `com.${pkg.name.toLowerCase()}`,
   userInterfaceStyle: "light",
   newArchEnabled: true,
@@ -27,6 +28,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff",
     },
+    package: "com.comic-pulse.app",
   },
   extra: {
     ...ClientEnv,
